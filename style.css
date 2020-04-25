@@ -16,6 +16,7 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
+    transition: all 0.5s;
   }
 
 body {
@@ -59,7 +60,6 @@ header {
 section.ctas {
     display: grid;
     gap: 2em;
-    justify-items: center;
 }
 
 section.ctas > * {
@@ -129,5 +129,37 @@ a {
     font-weight: 600;
 }
 
-/* === Media queries === */
+/* === Media query === */
+@media all and (min-width: 1024px) {
+    body {
+        background: linear-gradient(rgb(255, 122, 122, 0.75), rgb(255, 122, 122, 0.75)),
+                url(images/bg-intro-desktop.png);
+    }
 
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1200px;
+        gap: 4em;
+        height: 100vh;
+    }
+
+    header.hero {
+        justify-items: start;
+        text-align: left;
+        align-content: center;
+        line-height: 1.5;
+    }
+
+    .hero__headline {
+        font-size: 3em;
+    }
+
+    .hero__subhead {
+        text-align: left;
+    }
+
+    section.ctas {
+        align-items: center;
+        align-content: center;
+    }
+}
