@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+/* === base styles === */
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --purple: hsl(248, 32%, 49%);
+    --dark-purple: hsl(249, 10%, 26%);
+    --light-purple: hsl(246, 25%, 77%);
+    --white: #fefefa;
+}
+
+html {
+    box-sizing: border-box;
+  }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background: linear-gradient(rgb(255, 122, 122, 0.75), rgb(255, 122, 122, 0.75)),
+                url(images/bg-intro-mobile.png);
+    color: var(--white);
+}
+
+.wrapper {
+    display: grid;
+    gap: 3em;
+    width: 95%;
+    max-width: 700px;
+    margin: 3em auto;
+    padding: 2em;
+}
+
+/* header styles */
+
+header {
+    text-align: center;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    display: grid;
+}
+
+.hero__subhead {
+    font-weight: 400;
+    align-items: center;
+    justify-items: center;
+    line-height: 2;
+    text-align: center;
+}
+
+/* === CTAs section === */
+
+section.ctas {
+    display: grid;
+    gap: 2em;
+    justify-items: center;
+}
+
+section.ctas > * {
+    box-shadow: 0 .45em 1px rgba(0,0,0,0.2);
+}
+
+/* === Buttons === */
+
+.btn {
+    color: var(--white);
+    border: none;
+    font-size: 1em;
+    padding: 1.5em 4em;
+    border-radius: .5em;
+    box-shadow: 0 .45em 1px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.ctas__cta-button {
+    background: var(--purple);
+}
+
+.ctas__submit-button {
+    background: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 1.5;
+}
+
+.ctas__cta-button > span {
+    font-weight: 600;
+}
+
+/* === Form styles === */
+.main-form {
+    display: grid;
+    justify-items: center;
+    gap: 1em;
+    padding: 2em;
+    grid-template-columns: 1fr;
+    background: var(--white);
+    border: none;
+    border-radius: .5em;
+}
+
+
+.main-form input {
+    width: 100%;
+    border: 1px #DEDEDE solid;
+    border-radius: .5em;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.disclaimer {
+    color: #BBB;
+    font-size: .75em;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 600;
+}
+
+/* === Media queries === */
+
