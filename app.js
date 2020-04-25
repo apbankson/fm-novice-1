@@ -15,6 +15,7 @@ submitButton.addEventListener('click', () => {
 
 })
 
+// https://stackoverflow.com/questions/32708271/individual-error-messages-for-empty-form-fields-using-javascript/32708396
 
 // grab each input 
 // grab submit button 
