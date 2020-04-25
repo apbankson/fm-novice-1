@@ -16,7 +16,7 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
-    transition: all 0.5s;
+    transition: all 0.3s;
   }
 
 body {
@@ -24,7 +24,7 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    background: linear-gradient(rgb(255, 122, 122, 0.75), rgb(255, 122, 122, 0.75)),
+    background: linear-gradient(rgba(255, 122, 122, 0.5), rgba(255, 122, 122, 0.5)),
                 url(images/bg-intro-mobile.png);
     color: var(--white);
 }
@@ -63,7 +63,7 @@ section.ctas {
 }
 
 section.ctas > * {
-    box-shadow: 0 .45em 1px rgba(0,0,0,0.2);
+    box-shadow: 0 .4em 1px rgba(0,0,0,0.2);
 }
 
 /* === Buttons === */
@@ -74,21 +74,25 @@ section.ctas > * {
     font-size: 1em;
     padding: 1.5em 4em;
     border-radius: .5em;
-    box-shadow: 0 .45em 1px rgba(0,0,0,0.2);
+    box-shadow: 0 .4em 1px rgba(0,0,0,0.2);
 }
 
 .btn:hover {
     cursor: pointer;
+    filter: brightness(110%);
 }
+
 
 .ctas__cta-button {
     background: var(--purple);
 }
 
-.ctas__submit-button {
+.main-form .ctas__submit-button {
     background: var(--green);
     text-transform: uppercase;
     letter-spacing: 1.5;
+    border: none;
+    box-shadow: 0 .2em 1px rgba(43, 150, 104, 0.8);
 }
 
 .ctas__cta-button > span {
@@ -117,6 +121,23 @@ section.ctas > * {
     font-weight: 600;
 }
 
+.error {
+    display: none;
+}
+
+.error p {
+    color: var(--red);
+    font-style: italic;
+    font-size: 0.75em;
+    text-align: right;
+}
+
+.main-form input:active,
+.main-form input:focus {
+    outline: none;
+    border: solid 1px var(--dark-purple);
+} 
+
 .disclaimer {
     color: #BBB;
     font-size: .75em;
@@ -132,7 +153,7 @@ a {
 /* === Media query === */
 @media all and (min-width: 1024px) {
     body {
-        background: linear-gradient(rgb(255, 122, 122, 0.75), rgb(255, 122, 122, 0.75)),
+        background: linear-gradient(rgba(255, 122, 122, 0.5), rgba(255, 122, 122, 0.5)),
                 url(images/bg-intro-desktop.png);
     }
 
@@ -147,11 +168,12 @@ a {
         justify-items: start;
         text-align: left;
         align-content: center;
-        line-height: 1.5;
+        line-height: 1;
     }
 
     .hero__headline {
         font-size: 3em;
+        margin: 0;
     }
 
     .hero__subhead {

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/png">
     <link rel="stylesheet" href="style.css" type="text/css">
     <title>Frontend Mentor - Basic Signup Form</title>
 </head>
@@ -14,16 +15,28 @@
         </header>
     
         <section class="ctas">
-            <button class="btn ctas__cta-button"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
+            <button class="btn ctas__cta-button">
+                <span>Try it free 7 days</span> then $20/mo. thereafter
+            </button>
+
             <form action="" class="main-form">
-                <input type="text" name="firstName" id="firstName" placeholder="First Name">
-                <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                <input type="text" class="textInput" name="firstName" id="firstName" placeholder="First Name">
+                <div class="error"><p id="firstNameError"></p></div>
+
+                <input type="text" class="textInput" name="lastName" id="lastName" placeholder="Last Name">
+                <div class="error"><p id="lastNameError"></p></div>
+
                 <input type="email" name="email" id="email" placeholder="Email Address">
-                <input type="password" name="password" id="password" placeholder="Password">
-                <input type="submit" value="Claim Your Free Trial" class="btn ctas__submit-button">
+                <div class="error"><p id="emailError"></p></div>
+
+                <input type="password" class="textInput" name="password" id="password" placeholder="Password">
+                <div class="error"><p id="passwordError"></p></div>
+
+                <input type="submit" value="Claim Your Free Trial" class="btn ctas__submit-button" id="submitButton">
                 <p class="disclaimer">By clicking the button you are agreeing to our <a href="#">Terms and Services</a></p>
             </form>
         </section>
     </div>
+<script src="app.js"></script>
 </body>
 </html>
