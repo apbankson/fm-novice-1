@@ -5,14 +5,17 @@ const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const submitButton = document.querySelector('#submitButton');
 
+let nameError;
 
-submitButton.addEventListener('click', () => {
+submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
     if (firstName == null || firstName == '') {
-        let nameError = "First Name cannot be empty";
+        nameError = "First Name cannot be empty";
         firstNameError.innerHTML = nameError;
         firstNameError.parentNode.style.display = 'block';
+        firstNameError.parentNode.previousSibling.classList.add('error-border');
+        console.log('at least this is working');
     }
-
 })
 
 // https://stackoverflow.com/questions/32708271/individual-error-messages-for-empty-form-fields-using-javascript/32708396

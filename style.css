@@ -102,7 +102,6 @@ section.ctas > * {
 /* === Form styles === */
 .main-form {
     display: grid;
-    justify-items: center;
     gap: 1em;
     padding: 2em;
     grid-template-columns: 1fr;
@@ -130,6 +129,12 @@ section.ctas > * {
     font-style: italic;
     font-size: 0.75em;
     text-align: right;
+    margin: 0;
+}
+
+.error-border {
+    outline: none;
+    border: solid 1px var(--red);
 }
 
 .main-form input:active,
